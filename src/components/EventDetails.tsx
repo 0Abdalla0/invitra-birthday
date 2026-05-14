@@ -24,7 +24,9 @@ export function EventDetails() {
             whileHover={{ y: -4 }}
             className="glass rounded-xl p-5 hud-border relative overflow-hidden group"
           >
-            <div className="absolute -right-6 -top-6 text-7xl text-[var(--neon-purple)]/20 group-hover:text-[var(--neon-purple)]/40 transition">{it.icon}</div>
+            <div className="absolute -right-6 -top-6 text-7xl text-[var(--neon-purple)]/20 group-hover:text-[var(--neon-purple)]/40 transition">
+              {it.icon}
+            </div>
             <div className="font-hud text-[11px] text-[var(--neon-cyan)]">{it.label}</div>
             <div className="mt-1 font-display text-xl text-foreground">{it.value}</div>
           </motion.div>

@@ -14,7 +14,10 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: `${PARTY.name} — Level Up Party | Cyberpunk Birthday Invite` },
-      { name: "description", content: `Join ${PARTY.name} for a cinematic cyberpunk birthday — ${PARTY.tagline}. RSVP to the mission.` },
+      {
+        name: "description",
+        content: `Join ${PARTY.name} for a cinematic cyberpunk birthday — ${PARTY.tagline}. RSVP to the mission.`,
+      },
       { property: "og:title", content: `${PARTY.name} — Level Up Party` },
       { property: "og:description", content: `${PARTY.tagline}. ${PARTY.dateLabel}` },
     ],

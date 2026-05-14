@@ -21,7 +21,10 @@ export function IntroLoader({ onDone }: { onDone: () => void }) {
     }
     const t = setTimeout(() => setDone(true), 600);
     const t2 = setTimeout(() => onDone(), 1700);
-    return () => { clearTimeout(t); clearTimeout(t2); };
+    return () => {
+      clearTimeout(t);
+      clearTimeout(t2);
+    };
   }, [step, onDone]);
 
   return (

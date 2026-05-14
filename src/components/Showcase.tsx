@@ -40,7 +40,9 @@ export function GameShowcase() {
           <div className="font-display font-black text-[12rem] md:text-[16rem] leading-none text-neon-gradient drop-shadow-[0_0_60px_oklch(0.7_0.28_305/0.6)]">
             21
           </div>
-          <div className="font-hud text-sm text-[var(--neon-cyan)] tracking-[0.5em] -mt-4">UNLOCKED</div>
+          <div className="font-hud text-sm text-[var(--neon-cyan)] tracking-[0.5em] -mt-4">
+            UNLOCKED
+          </div>
         </motion.div>
 
         {/* floating chips */}
@@ -71,7 +73,11 @@ export function PartyCardExport() {
   const [generated, setGenerated] = useState(false);
   return (
     <section className="relative py-24 px-6">
-      <SectionHeader kicker="DIGITAL CARD" title="YOUR PASS" sub="Generate a personal invite card to share." />
+      <SectionHeader
+        kicker="DIGITAL CARD"
+        title="YOUR PASS"
+        sub="Generate a personal invite card to share."
+      />
 
       <div className="mt-12 max-w-md mx-auto">
         <motion.div
@@ -89,7 +95,9 @@ export function PartyCardExport() {
             </div>
             <div className="mt-6 font-hud text-xs text-muted-foreground">PLAYER</div>
             <div className="font-display text-4xl text-foreground">{PARTY.name}</div>
-            <div className="mt-2 font-hud text-xs text-[var(--neon-cyan)]">@{PARTY.name.toLowerCase()}_pl4yer</div>
+            <div className="mt-2 font-hud text-xs text-[var(--neon-cyan)]">
+              @{PARTY.name.toLowerCase()}_pl4yer
+            </div>
 
             <div className="mt-auto">
               <div className="font-hud text-[10px] text-muted-foreground">EVENT</div>
@@ -99,8 +107,10 @@ export function PartyCardExport() {
               <div className="mt-4 flex items-end justify-between">
                 <div className="font-display text-6xl text-neon-gradient">21</div>
                 <div className="text-right font-hud text-[9px] text-muted-foreground leading-tight">
-                  ACCESS::GRANTED<br />
-                  TIER::DIAMOND<br />
+                  ACCESS::GRANTED
+                  <br />
+                  TIER::DIAMOND
+                  <br />
                   SEAT::FRONT_ROW
                 </div>
               </div>
@@ -120,14 +130,20 @@ export function PartyCardExport() {
             ⤓ DOWNLOAD
           </button>
           <button
-            onClick={() => navigator.share?.({ title: "Level Up Party", text: "You're invited!" }).catch(() => {})}
+            onClick={() =>
+              navigator
+                .share?.({ title: "Level Up Party", text: "You're invited!" })
+                .catch(() => {})
+            }
             className="font-hud tracking-widest px-4 py-2.5 rounded-md bg-neon text-primary-foreground glow-purple"
           >
             ↗ SHARE
           </button>
         </div>
         {generated && (
-          <p className="text-center mt-3 font-hud text-xs text-[var(--neon-cyan)]">CARD_RENDERED ✓</p>
+          <p className="text-center mt-3 font-hud text-xs text-[var(--neon-cyan)]">
+            CARD_RENDERED ✓
+          </p>
         )}
       </div>
     </section>

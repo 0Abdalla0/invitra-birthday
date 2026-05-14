@@ -5,11 +5,41 @@ import { SectionHeader } from "./Hero";
 type Msg = { id: number; user: string; text: string; color: string; time: string };
 
 const seed: Msg[] = [
-  { id: 1, user: "ZeroCool", text: "Locked in. Bringing the loot 🍾", color: "var(--neon-cyan)", time: "now" },
-  { id: 2, user: "Aria.exe", text: "GG WP — see you in the lobby", color: "var(--neon-purple)", time: "2m" },
-  { id: 3, user: "Vox", text: "Dress code understood. Full neon mode.", color: "var(--neon-pink)", time: "5m" },
-  { id: 4, user: "Kira", text: "Pre-game playlist incoming 🎧", color: "var(--neon-blue)", time: "8m" },
-  { id: 5, user: "N1ghtwing", text: "21? Officially a final boss now.", color: "var(--neon-cyan)", time: "12m" },
+  {
+    id: 1,
+    user: "ZeroCool",
+    text: "Locked in. Bringing the loot 🍾",
+    color: "var(--neon-cyan)",
+    time: "now",
+  },
+  {
+    id: 2,
+    user: "Aria.exe",
+    text: "GG WP — see you in the lobby",
+    color: "var(--neon-purple)",
+    time: "2m",
+  },
+  {
+    id: 3,
+    user: "Vox",
+    text: "Dress code understood. Full neon mode.",
+    color: "var(--neon-pink)",
+    time: "5m",
+  },
+  {
+    id: 4,
+    user: "Kira",
+    text: "Pre-game playlist incoming 🎧",
+    color: "var(--neon-blue)",
+    time: "8m",
+  },
+  {
+    id: 5,
+    user: "N1ghtwing",
+    text: "21? Officially a final boss now.",
+    color: "var(--neon-cyan)",
+    time: "12m",
+  },
 ];
 
 const colors = [
@@ -40,7 +70,11 @@ export function PartyWall() {
 
   return (
     <section id="wall" className="relative py-24 px-6">
-      <SectionHeader kicker="LIVE FEED" title="PARTY WALL" sub="Drop a message into the broadcast." />
+      <SectionHeader
+        kicker="LIVE FEED"
+        title="PARTY WALL"
+        sub="Drop a message into the broadcast."
+      />
 
       {/* composer */}
       <div className="mt-10 max-w-3xl mx-auto glass hud-border rounded-xl p-5">
@@ -67,7 +101,11 @@ export function PartyWall() {
                 key={c.name}
                 onClick={() => setColor(c.v)}
                 className={`size-5 rounded-full border-2 transition ${color === c.v ? "scale-110" : "border-transparent"}`}
-                style={{ background: c.v, borderColor: color === c.v ? "white" : "transparent", boxShadow: `0 0 10px ${c.v}` }}
+                style={{
+                  background: c.v,
+                  borderColor: color === c.v ? "white" : "transparent",
+                  boxShadow: `0 0 10px ${c.v}`,
+                }}
               />
             ))}
           </div>
@@ -110,7 +148,9 @@ export function PartyWall() {
                 >
                   {m.user[0].toUpperCase()}
                 </div>
-                <div className="font-hud text-xs" style={{ color: m.color }}>{m.user}</div>
+                <div className="font-hud text-xs" style={{ color: m.color }}>
+                  {m.user}
+                </div>
                 <div className="ml-auto font-hud text-[10px] text-muted-foreground">{m.time}</div>
               </div>
               <div className="mt-2 text-sm text-foreground/90">{m.text}</div>

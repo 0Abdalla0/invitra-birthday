@@ -67,7 +67,9 @@ export function HudNav() {
               className="group relative px-3 py-2 rounded-xl hover:bg-white/5 transition flex flex-col items-center min-w-[52px]"
             >
               <span className="text-[var(--neon-cyan)] text-sm">{l.icon}</span>
-              <span className="font-hud text-[9px] text-muted-foreground group-hover:text-foreground mt-0.5 hidden sm:block">{l.label}</span>
+              <span className="font-hud text-[9px] text-muted-foreground group-hover:text-foreground mt-0.5 hidden sm:block">
+                {l.label}
+              </span>
             </a>
           ))}
         </div>

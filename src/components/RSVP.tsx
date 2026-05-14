@@ -36,7 +36,11 @@ export function RSVP() {
 
   return (
     <section id="rsvp" className="relative py-24 px-6">
-      <SectionHeader kicker="ACCESS REQUEST" title="JOIN THE MISSION" sub="Confirm your status. Limited slots in the lobby." />
+      <SectionHeader
+        kicker="ACCESS REQUEST"
+        title="JOIN THE MISSION"
+        sub="Confirm your status. Limited slots in the lobby."
+      />
 
       <div className="mt-12 max-w-5xl mx-auto grid md:grid-cols-3 gap-4">
         {opts.map((o) => {
@@ -55,7 +59,9 @@ export function RSVP() {
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <div className="font-hud text-xs" style={{ color: o.color }}>{o.label}</div>
+                  <div className="font-hud text-xs" style={{ color: o.color }}>
+                    {o.label}
+                  </div>
                   <div className="mt-1 font-display text-3xl">{counts[o.id]}</div>
                 </div>
                 <div className="font-hud text-2xl text-muted-foreground">{pct}%</div>
@@ -70,7 +76,9 @@ export function RSVP() {
                 />
               </div>
               {active && (
-                <div className="mt-3 font-hud text-[10px] text-[var(--neon-cyan)]">✓ STATUS_LOCKED</div>
+                <div className="mt-3 font-hud text-[10px] text-[var(--neon-cyan)]">
+                  ✓ STATUS_LOCKED
+                </div>
               )}
             </motion.button>
           );

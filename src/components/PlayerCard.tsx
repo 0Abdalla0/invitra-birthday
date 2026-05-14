@@ -20,7 +20,11 @@ const achievements = [
 export function PlayerCard() {
   return (
     <section id="player" className="relative py-24 px-6">
-      <SectionHeader kicker="PROFILE" title="PLAYER ONE" sub="Tonight's main character. Loaded with XP, ready to drop." />
+      <SectionHeader
+        kicker="PROFILE"
+        title="PLAYER ONE"
+        sub="Tonight's main character. Loaded with XP, ready to drop."
+      />
 
       <div className="mt-12 max-w-5xl mx-auto">
         <div className="relative glass hud-border rounded-2xl overflow-hidden">
@@ -32,17 +36,25 @@ export function PlayerCard() {
               <div className="aspect-square rounded-xl overflow-hidden relative bg-gradient-to-br from-[var(--neon-purple)] to-[var(--neon-blue)] grid place-items-center glow-purple">
                 <div className="absolute inset-0 grid-bg opacity-40" />
                 <div className="font-display text-7xl text-white drop-shadow">{PARTY.name[0]}</div>
-                <div className="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-black/60 font-hud text-[10px] text-[var(--neon-cyan)]">LVL 21</div>
+                <div className="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-black/60 font-hud text-[10px] text-[var(--neon-cyan)]">
+                  LVL 21
+                </div>
               </div>
-              <div className="mt-3 font-hud text-xs text-center text-muted-foreground">@{PARTY.name.toLowerCase()}_pl4yer</div>
+              <div className="mt-3 font-hud text-xs text-center text-muted-foreground">
+                @{PARTY.name.toLowerCase()}_pl4yer
+              </div>
             </div>
 
             {/* info */}
             <div>
               <div className="flex flex-wrap items-end gap-x-4 gap-y-2">
                 <h3 className="font-display text-3xl md:text-4xl text-foreground">{PARTY.name}</h3>
-                <span className="font-hud text-xs text-[var(--neon-cyan)] px-2 py-0.5 rounded border border-[var(--neon-cyan)]/40">ONLINE</span>
-                <span className="font-hud text-xs text-[var(--neon-purple)] px-2 py-0.5 rounded border border-[var(--neon-purple)]/40">VIP</span>
+                <span className="font-hud text-xs text-[var(--neon-cyan)] px-2 py-0.5 rounded border border-[var(--neon-cyan)]/40">
+                  ONLINE
+                </span>
+                <span className="font-hud text-xs text-[var(--neon-purple)] px-2 py-0.5 rounded border border-[var(--neon-purple)]/40">
+                  VIP
+                </span>
               </div>
 
               {/* XP bar */}
@@ -67,7 +79,9 @@ export function PlayerCard() {
                 {stats.map((s) => (
                   <div key={s.label} className="glass rounded-md p-3">
                     <div className="font-hud text-[10px] text-muted-foreground">{s.label}</div>
-                    <div className="font-display text-lg text-[var(--neon-cyan)] truncate">{s.value}</div>
+                    <div className="font-display text-lg text-[var(--neon-cyan)] truncate">
+                      {s.value}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -77,7 +91,12 @@ export function PlayerCard() {
                 <div className="font-hud text-xs text-muted-foreground mb-2">FAVORITE LOADOUT</div>
                 <div className="flex flex-wrap gap-2">
                   {games.map((g) => (
-                    <span key={g} className="text-xs px-3 py-1 rounded-full glass border border-white/10 hover:border-[var(--neon-cyan)] transition">{g}</span>
+                    <span
+                      key={g}
+                      className="text-xs px-3 py-1 rounded-full glass border border-white/10 hover:border-[var(--neon-cyan)] transition"
+                    >
+                      {g}
+                    </span>
                   ))}
                 </div>
               </div>

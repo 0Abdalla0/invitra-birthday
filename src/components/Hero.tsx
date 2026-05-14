@@ -168,9 +168,7 @@ export function Countdown() {
             className="relative glass hud-border rounded-xl p-6 text-center overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-b from-[var(--neon-purple)]/10 to-transparent pointer-events-none" />
-            <div className="font-display text-5xl md:text-6xl text-neon-gradient">
-              {pad(it.v)}
-            </div>
+            <div className="font-display text-5xl md:text-6xl text-neon-gradient">{pad(it.v)}</div>
             <div className="mt-2 font-hud text-xs text-[var(--neon-cyan)]">{it.label}</div>
             <div className="mt-3 h-0.5 bg-gradient-to-r from-transparent via-[var(--neon-cyan)] to-transparent" />
           </motion.div>
@@ -189,7 +187,15 @@ function diff(target: Date) {
   return { d, h, m, s };
 }
 
-export function SectionHeader({ kicker, title, sub }: { kicker: string; title: string; sub?: string }) {
+export function SectionHeader({
+  kicker,
+  title,
+  sub,
+}: {
+  kicker: string;
+  title: string;
+  sub?: string;
+}) {
   return (
     <div className="text-center max-w-3xl mx-auto">
       <div className="inline-flex items-center gap-2 font-hud text-xs text-[var(--neon-cyan)]">
